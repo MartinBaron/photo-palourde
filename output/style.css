@@ -1,0 +1,430 @@
+	
+/*CHARTE GRAPHIQUE
+$color_purple : rgb(160,42,150)
+$color_yellow : rgb(247,185,45)
+$color_blue : rgb(36,57,87)
+*/
+
+body {
+	/*color: rgb(36,57,87);*/
+    /*background-image: url("images/home.jpg");
+    background-position : 214px -20px;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    height:100%;*/
+    }
+
+
+/*PHOTO PAGE*/
+.photo img{
+	text-align:center;
+	max-width:100%;
+	max-height:700px;
+	margin-top:1em;
+
+}
+.photo{
+	max-width: 70%;
+	height:auto;
+}
+
+a img:hover{
+	opacity:0.7;
+}
+
+.album-page{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.page-side{
+	max-width:30%;
+	height: auto;
+	padding:2em;
+	margin-top:16em;
+}
+
+.page-side img{
+	max-width:60px;
+	height: auto;
+	margin: 2em;
+}
+
+
+
+/* FOOTER FOR PHOTO PAGE*/
+
+footer {
+	font-style: italic; 
+	color: rgb(36,57,87);
+	float : left;
+	position:fixed;
+	top: 720px;
+}
+
+footer a{
+	text-decoration: none;
+	color: rgb(36,57,87);
+
+}
+
+.page-bottom{
+	margin:1em;
+}
+
+.page-bottom img{
+	max-width:50%;
+	min-height:100px;
+}
+
+
+
+/*HOME PAGE, A PROPOS, and ALBUM PAGE*/
+section {
+	display : inline-block;
+	border-left: 2px  rgb(36,57,87) solid;
+    margin-left:15em;
+	margin-top:-1em;
+	margin-right:-0.5em;}
+
+
+section h2{
+	font-size:1.7em;
+	font-style: italic;
+}
+
+section h3{
+	font-size:1.7em;
+	font-style: italic;
+	margin-left:2em;
+	margin-bottom:0em;
+}
+
+section h6{
+	font-size:1.7em;
+	font-style: italic;
+	margin-left:2em;
+	margin-bottom:0em;
+	margin-top:1em;
+}
+
+section p{
+	font-size : 1.3em;
+	text-align:center;
+	padding-right: 4em;
+	padding-left: 4em;
+	padding-bottom:0.5em;
+	text-align: justify;
+}
+
+.top-picture img{
+	max-width: 100%;
+	height:auto;
+}
+
+
+/*Albums thumbnails for home page*/
+.albums-thumbnails ul{
+	display : flex;
+	justify-content: space-around;
+	align-items: baseline;
+	flex-wrap: wrap;
+	list-style-type : none;
+	margin-right: 2.5em;
+	margin-top: 3em;
+}
+.albums-thumbnails img {
+	background-color: rgb(223,55,76);
+	margin-bottom:-1em;
+}
+.albums-thumbnails img:hover{
+	opacity:0.7;
+}
+
+/*$color_purple : rgb(160,42,150)
+$color_yellow : rgb(247,185,45)
+$color_blue : rgb(36,57,87)
+*/
+
+
+.albums-thumbnails time{
+	color:rgb(107,123,135);
+	font-size:1.2em;
+	padding-top:1em;
+}
+
+.thumb {
+	display:flex;
+	justify-content: space-between;
+	align-items:baseline;
+}
+
+
+/*ALBUM OVERVIEW: thumbnails of all photos*/
+
+.album-title{
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.album-title time {
+	color:rgb(107,123,135);
+	font-size:1.2em;
+}
+
+.album-title * {
+	padding : 1em 1em 0em 2em;
+}
+
+.album-thumbnails ul{
+	display : flex;
+	justify-content: center;
+	align-content: space-between;
+	flex-wrap: wrap;
+	list-style-type : none;
+	margin-right: 4em;
+	max-width: 80em;
+	margin-left: 5em;
+	padding:5px
+}
+
+.album-thumbnails li{
+	margin : 5px 5px auto;
+
+}
+
+.album-thumbnails img:hover{
+	opacity:0.7;
+}
+
+.album-thumbnails img{
+	max-height:200px;
+	min-height: 200px;
+
+}
+
+
+/*HEADER PROPERTIES*/
+.logo{
+	margin-left:1em;
+}
+
+em {
+	font-weight: bold;
+}
+header {
+	width:15em;
+	height: 100%;
+	top:0;
+	bottom:0;
+	left:0;
+	float: left;
+	vertical-align: top;
+	min-width: 200px;
+	position: fixed;
+}
+
+header li{
+	list-style-type:none;
+	font-size: 1.5em;
+	padding-bottom : 0.3em;
+}
+
+header li:hover{
+	list-style-type:disc;
+
+}
+
+header a{
+	text-decoration: none;
+	color: rgb(0,0,0);
+}
+
+header h1{
+	margin-left: 1em;
+	margin-bottom: 1.5em;
+}
+
+header h3{
+	margin-left: 1em;
+	font-size:1.5em;
+	font-style: italic;
+}
+
+strong {
+text-decoration:underline;
+}
+
+/*FOOTER*/
+
+.footfoot {
+	color:rgb(36,57,87);
+	margin-left:18em;
+	font-size:1.3em;
+	margin-right:4em;
+	margin-top: 2em
+
+}
+.footfoot em{
+	color:rgb(160,42,150);
+	text-decoration: none;
+}
+.footfoot strong{
+	color: rgb(247,185,45);
+	text-decoration: none;
+}
+.footfoot a{
+	color:rgb(0,0,0);
+
+}
+.footfoot h4{
+	color:rgb(0,0,0);
+	font-style: italic;
+	float:right;
+
+}
+
+.footfoot h5{
+	display:none;
+}
+
+.header-mobile{
+	display: none;
+}
+
+@media screen and (max-width: 1100px) {
+	.top-picture img{
+
+	}
+	header {
+		display:none;
+	}
+	section{
+		margin-right:-0.5em;
+		margin-left:-0.5em;
+		margin-top:-0.5em;
+		margin-bottom:auto;
+		border:unset;
+	}
+	.albums-thumbnails ul{
+		margin:auto;
+		justify-content: center;
+		margin-top:2em;
+		display:flex;
+		flex-direction: column;
+		margin-left:-3em;
+	}
+		.albums-thumbnails li{
+		width:100%;
+	}
+	.albums-thumbnails img{
+		width:100%;
+	}
+	.thumb{
+		justify-content: space-around
+	}
+	.header-mobile{
+	display: flex;
+	justify-content: space-between;
+	width:100%;
+	min-height: 200px;
+	text-align: center;
+	margin-right:2em;
+	background-color: white;
+	margin-top:1.5em;
+}
+.header-mobile h1{
+	font-size: 5em;
+}
+
+.header-mobile a{
+	text-decoration : none;
+	color : rgb(0,0,0);
+}
+
+.albums-thumbnails {
+margin-top:2em;
+}
+
+section h3{
+	font-size:2.5em;
+	margin-left:0em;
+	margin-right:0.5em;
+}
+section h6{
+	font-size:3.5em;
+	font-style: italic;
+	margin-left:2em;
+	margin-bottom:0em;
+	margin-top:1em;
+}
+
+section p{
+	font-size : 2.8em;
+	padding-right:2em;
+	padding-left:2em;
+}
+
+section h2{
+	font-size:3.5em;
+}
+.albums-thumbnails time{
+	font-size:2.5em;
+}
+
+.footfoot{
+	margin-left:2em;
+	margin-right:2em;
+	font-size:3.2em;
+}
+
+.footfoot h5{
+	display:block;
+	color:black;
+}
+
+.album-page{
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap:wrap;
+}
+
+.page-side{margin-top:0em;
+padding:0em;}
+
+.photo{max-width:100%;}
+
+.photo img {max-height: 1300px;}
+
+footer {
+position:relative;
+top:10px;}
+
+footer h3 {
+	font-size:3em;
+}
+
+.album-title h1{
+	font-size:3em;
+}
+
+.album-title time{
+	font-size:2em;
+}
+
+.album-title{
+	margin-top: -3em;
+}
+
+}
+
+
+}
+
+

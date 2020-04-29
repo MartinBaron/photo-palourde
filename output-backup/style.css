@@ -1,0 +1,279 @@
+
+/*CHARTE GRAPHIQUE
+$color_purple : rgb(160,42,150)
+$color_yellow : rgb(247,185,45)
+$color_blue : rgb(36,57,87)
+*/
+
+body {
+	color: rgb(36,57,87);
+    /*background-image: url("images/home.jpg");
+    background-position : 214px -20px;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    height:100%;*/
+    }
+
+
+/*PHOTO PAGE*/
+.photo img{
+	text-align:center;
+	max-width:100%;
+	max-height:700px;
+	margin-top:1em;
+
+}
+.photo{
+	max-width: 70%;
+	height:auto;
+}
+
+a img:hover{
+	opacity:0.7;
+}
+
+.album-page{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.page-side{
+	max-width:30%;
+	height: auto;
+	padding:2em;
+	margin-top:16em;
+}
+
+.page-side img{
+	max-width:60px;
+	height: auto;
+	margin: 2em;
+}
+
+
+
+/* FOOTER FOR PHOTO PAGE*/
+
+footer {
+	font-style: italic; 
+	color: rgb(36,57,87);
+	float : left;
+	position:fixed;
+	top: 720px;
+}
+
+footer a{
+	text-decoration: none;
+	color: rgb(36,57,87);
+
+}
+
+.page-bottom{
+	margin:1em;
+}
+
+.page-bottom img{
+	max-width:50%;
+	min-height:100px;
+}
+
+
+
+/*HOME PAGE, A PROPOS, and ALBUM PAGE*/
+section {
+	display : inline-block;
+	border-left: 2px  rgb(36,57,87) solid;
+    margin-left:15em;
+	margin-top:-1em;
+	margin-right:-0.5em;}
+
+
+section h2{
+	font-size:1.7em;
+	font-style: italic;
+}
+
+section h3{
+	font-size:1.7em;
+	font-style: italic;
+	margin-left:2em;
+}
+
+section p{
+	font-size : 1.3em;
+	text-align:center;
+	padding : 0.5em;
+}
+
+.top-picture img{
+	max-width: 100%;
+	height:auto;
+}
+
+
+/*Albums thumbnails for home page*/
+.albums-thumbnails ul{
+	display : flex;
+	justify-content: space-around;
+	align-items: baseline;
+	flex-wrap: wrap;
+	list-style-type : none;
+	margin-right: 2.5em;
+	margin-top: 3em;
+}
+.albums-thumbnails img {
+	background-color: rgb(223,55,76);
+	margin-bottom:-1em;
+}
+.albums-thumbnails img:hover{
+	opacity:0.7;
+}
+
+/*$color_purple : rgb(160,42,150)
+$color_yellow : rgb(247,185,45)
+$color_blue : rgb(36,57,87)
+*/
+
+
+.albums-thumbnails time{
+	color:rgb(107,123,135);
+	font-size:1.2em;
+	padding-top:1em;
+}
+
+.thumb {
+	display:flex;
+	justify-content: space-between;
+	align-items:baseline;
+}
+
+
+/*ALBUM OVERVIEW: thumbnails of all photos*/
+
+.album-title{
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: baseline;
+}
+
+.album-title time {
+	color:rgb(107,123,135);
+	font-size:1.2em;
+}
+
+.album-title * {
+	padding : 1em 1em 0em 2em;
+}
+
+.album-thumbnails ul{
+	display : flex;
+	justify-content: center;
+	align-content: space-between;
+	flex-wrap: wrap;
+	list-style-type : none;
+	margin-right: 4em;
+	max-width: 80em;
+	margin-left: 5em;
+	padding:5px
+}
+
+.album-thumbnails li{
+	margin : 5px 5px auto;
+
+}
+
+.album-thumbnails img:hover{
+	opacity:0.7;
+}
+
+.album-thumbnails img{
+	max-height:200px;
+	min-height: 200px;
+
+}
+
+
+/*HEADER PROPERTIES*/
+.logo{
+	margin-left:1em;
+}
+
+em {
+	font-weight: bold;
+}
+header {
+	width:15em;
+	height: 100%;
+	top:0;
+	bottom:0;
+	left:0;
+	float: left;
+	vertical-align: top;
+	min-width: 200px;
+	position: fixed;
+}
+
+header li{
+	list-style-type:none;
+	font-size: 1.5em;
+	padding-bottom : 0.3em;
+}
+
+header li:hover{
+	list-style-type:disc;
+
+}
+
+header a{
+	text-decoration: none;
+	color: rgb(36,57,87);
+}
+
+header h1{
+	margin-left: 1em;
+	margin-bottom: 1.5em;
+}
+
+header h3{
+	margin-left: 1em;
+	font-size:1.5em;
+	font-style: italic;
+}
+
+strong {
+text-decoration:underline;
+}
+
+@media screen and (max-width: 1100px) {
+	header {
+	height:15em;
+	width: 100%;
+	bottom:0;
+	position: absolute;
+	float:none;
+	top:auto;
+	right:auto;
+	left:auto;
+	}
+	section{
+		margin-right:-0.5em;
+		margin-left:-0.5em;
+		margin-top:-0.5em;
+		margin-bottom:auto;
+		border:unset;
+	}
+	.albums-thumbnails ul{
+		margin:auto;
+		justify-content: center;
+		margin-top:2em;
+	}
+		.albums-thumbnails li{
+		width:80%;
+	}
+	.albums-thumbnails img{
+		width:100%;
+	}
+}
