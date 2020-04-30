@@ -60,8 +60,8 @@ footer {
 	font-style: italic; 
 	color: rgb(36,57,87);
 	float : left;
-	position:fixed;
-	top: 720px;
+	/*position:fixed;
+	top: 720px;*/
 }
 
 footer a{
@@ -135,9 +135,12 @@ section p{
 	margin-right: 2.5em;
 	margin-top: 3em;
 }
+
+
 .albums-thumbnails img {
 	background-color: rgb(223,55,76);
 	margin-bottom:-1em;
+	max-width:440px;
 }
 .albums-thumbnails img:hover{
 	opacity:0.7;
@@ -257,6 +260,12 @@ header h3{
 
 strong {
 text-decoration:underline;
+}
+
+.low-tech-balise{
+	color:rgb(160,42,150);
+	text-decoration:underline;
+	font-weight:bold;
 }
 
 /*FOOTER*/
