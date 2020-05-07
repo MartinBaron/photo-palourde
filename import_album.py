@@ -134,7 +134,7 @@ def gen_page(current,album_name, album_name_display, last_page):
 	#checking if first page
 	if current == "01":
 		photo_previous = '<img src="../../../images/left_palourde.png", alt="previous" style="opacity:0;"/>'
-		photo_previous_link = current + '.html'
+		photo_previous_link = '"' +current + '.html'  + '"'
 	else:
 		previous_number = int(current)-1
 		if previous_number < 10:
@@ -142,11 +142,11 @@ def gen_page(current,album_name, album_name_display, last_page):
 		else:
 			previous_number = str(previous_number)
 		photo_previous = '<a href="'+previous_number+'.html"><img src="../../../images/left_palourde.png", alt="previous"/></a>'
-		photo_previous_link = previous_number + '.html'
+		photo_previous_link = '"' + previous_number + '.html'  + '"'
 	#checking if last page
 	if last_page:
 		photo_next = '<img src="../../../images/right_palourde.png", alt="next" style="opacity:0;"/>'
-		photo_next_link = current + '.html'
+		photo_next_link = '"' + current + '.html'  + '"'
 	else:
 		next_number = int(current)+1
 		if next_number < 10:
@@ -154,13 +154,13 @@ def gen_page(current,album_name, album_name_display, last_page):
 		else:
 			next_number = str(next_number)
 		photo_next = '<a href="'+next_number+'.html"><img src="../../../images/right_palourde.png", alt="next"/></a>'
-		photo_next_link = next_number + '.html'
+		photo_next_link = '"' + next_number + '.html' + '"'
 	#other variables
 	photo_current = '<img src="../photo/'+current+'.jpg", alt="album-photo"/>'
 	photo_bottom = '<a href="../overview.html">← '+ album_name_display + '</a> // Photo ' + current
 	#writing page
 	for line in hin:
-		hout.write(line.replace('#PHOTO_NEXT', photo_next).replace('#PHOTO_PREVIOUS', photo_previous).replace('#PHOTO_CURRENT',photo_current).replace('#PHOTO_BOTTOM',photo_bottom).replace('#PHOTO_PREVIOUS_LINK', photo_previous_link).replace('#PHOTO_NEXT_LINK', photo_next_link))
+		hout.write(line.replace('#PHOTO_NEXT', photo_next).replace('#PHOTO_PREVIOUS', photo_previous).replace('#PHOTO_CURRENT',photo_current).replace('#PHOTO_BOTTOM',photo_bottom).replace('#PHOTO_PS_LINK', photo_previous_link).replace('#PHOTO_NT_LINK', photo_next_link))
 	hin.close()
 	hout.close()
 

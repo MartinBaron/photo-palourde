@@ -27,5 +27,16 @@
         		</h3>
         	</div>
         </footer>
+         <script>
+                document.onkeyup = function(e) {
+                    if (e.which == 37) {
+                        console.log("left arrow key was pressed");
+                        window.location.href = "27.html";
+                    } else if (e.which == 39) {
+                        console.log("right arrow key was pressed");
+                        window.location.href = "29.html";
+                    }
+                };
+        </script>
     </body>
 </html>
