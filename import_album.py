@@ -147,6 +147,7 @@ def gen_page(current,album_name, album_name_display, last_page):
 	if last_page:
 		photo_next = '<img src="../../../images/right_palourde.png", alt="next" style="opacity:0;"/>'
 		photo_next_link = '"' + current + '.html'  + '"'
+		next_picture = "../photo/"+current+".jpg"
 	else:
 		next_number = int(current)+1
 		if next_number < 10:
@@ -155,12 +156,13 @@ def gen_page(current,album_name, album_name_display, last_page):
 			next_number = str(next_number)
 		photo_next = '<a href="'+next_number+'.html"><img src="../../../images/right_palourde.png", alt="next"/></a>'
 		photo_next_link = '"' + next_number + '.html' + '"'
+		next_picture = "../photo/"+ next_number+ ".jpg"
 	#other variables
 	photo_current = '<img src="../photo/'+current+'.jpg", alt="album-photo"/>'
 	photo_bottom = '<a href="../overview.html">← '+ album_name_display + '</a> // Photo ' + current
 	#writing page
 	for line in hin:
-		hout.write(line.replace('#PHOTO_NEXT', photo_next).replace('#PHOTO_PREVIOUS', photo_previous).replace('#PHOTO_CURRENT',photo_current).replace('#PHOTO_BOTTOM',photo_bottom).replace('#PHOTO_PS_LINK', photo_previous_link).replace('#PHOTO_NT_LINK', photo_next_link))
+		hout.write(line.replace('#PHOTO_NEXT', photo_next).replace('#PHOTO_PREVIOUS', photo_previous).replace('#PHOTO_CURRENT',photo_current).replace('#PHOTO_BOTTOM',photo_bottom).replace('#PHOTO_PS_LINK', photo_previous_link).replace('#PHOTO_NT_LINK', photo_next_link).replace('#NEXT_PICTURE', next_picture))
 	hin.close()
 	hout.close()
 
