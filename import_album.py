@@ -215,11 +215,12 @@ def date_translator(album_date):
 		mois = "Décembre"
 	return str(mois + " " + album_date.split(" ")[1])
 
-def create_htmls(album_name, album_date,album_name_display):
+def create_htmls(album_name = "", album_date = "",album_name_display = ""):
 	#updating album.csv
-	with open('albums.csv','a', newline='\n') as csvfile:
-		csvwriter = csv.writer(csvfile,delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL,lineterminator='\n')
-		csvwriter.writerow([album_name, album_date.strftime('%m/%Y'), album_name_display])
+	if album_name != "" and album_date != "" and album_name_display != "":	
+		with open('albums.csv','a', newline='\n') as csvfile:
+			csvwriter = csv.writer(csvfile,delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL,lineterminator='\n')
+			csvwriter.writerow([album_name, album_date.strftime('%m/%Y'), album_name_display])
 	
 	#generating album liste and album vignette html parts
 	with open('albums.csv','r') as csvfile:
@@ -239,9 +240,10 @@ def create_htmls(album_name, album_date,album_name_display):
 		###print(album_vignette)
 	#generating home page
 	gen_index(album_liste_home,album_vignette)
-
+	print("generating index")
 	#generating a_propos page
 	gen_a_propos(album_liste_home)
+	print("generating about")
 
 	#generating overview.html and pages for all albums
 	with open('albums.csv','r') as csvfile:
@@ -293,28 +295,38 @@ def backup():
 
 def main():
 	print("*P*H*O*T*O*P*A*L*O*U*R*D*E*","\n")
-	print("Importons un nouvel album !")
-	print("************************\n")
-	album_name_display = input("Comment s'appelle ce nouvel album ? \n")
-	album_date_input = input("Quelle est la date de cet album ? (MM/AAAA, commme 03/2020 par exemple) \n")
-	album_date_split = album_date_input.split("/")
-	album_date = datetime(int(album_date_split[1]), int(album_date_split[0]),1)
-	print(album_date.strftime('%b %Y'))
-	d = date_translator(album_date)
-	print(d)
-	#create the folder name
-	album_name = unidecode.unidecode(album_name_display.replace(" ", "_").lower().translate(str.maketrans('', '', string.punctuation)))
-	###print(album_date)
-	###print(album_name_display)
-	print("Le dossier sera appelé " + album_name)
-	backup()
-	create_folders(album_name)
-	rename_photos("input/", album_name)
-	dither_photos(album_name)
-	resize_photos(album_name)
-	create_htmls(album_name, album_date,album_name_display)
-	print("************************\n")
-	print("L'import est terminé. Ouvrez output/index.html pour admirer le résultat :) \n")
+	rep1 = ""
+	while rep1 not in ["o","n"]:
+		rep1 = input("Bonjour ! Souhaitez-vous importer un nouvel album ? o/n")
+		print(rep1)
+	if rep1 == "n" :
+		print("Nous allons donc simplement mettre à jour le code avec les albums existant !")
+		create_htmls()
+		print("************************\n")
+		print("Le code a été mis à jour !")
+	elif rep1 == "o":
+		print("Importons un nouvel album !")
+		print("************************\n")
+		album_name_display = input("Comment s'appelle ce nouvel album ? \n")
+		album_date_input = input("Quelle est la date de cet album ? (MM/AAAA, commme 03/2020 par exemple) \n")
+		album_date_split = album_date_input.split("/")
+		album_date = datetime(int(album_date_split[1]), int(album_date_split[0]),1)
+		print(album_date.strftime('%b %Y'))
+		d = date_translator(album_date)
+		print(d)
+		#create the folder name
+		album_name = unidecode.unidecode(album_name_display.replace(" ", "_").lower().translate(str.maketrans('', '', string.punctuation)))
+		###print(album_date)
+		###print(album_name_display)
+		print("Le dossier sera appelé " + album_name)
+		backup()
+		create_folders(album_name)
+		rename_photos("input/", album_name)
+		dither_photos(album_name)
+		resize_photos(album_name)
+		create_htmls(album_name, album_date,album_name_display)
+		print("************************\n")
+		print("L'import est terminé. Ouvrez output/index.html pour admirer le résultat :) \n")
 
 exc = main()
 
