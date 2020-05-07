@@ -19,7 +19,7 @@ body {
 .photo img{
 	text-align:center;
 	max-width:100%;
-	max-height:700px;
+	max-height:670px;
 	margin-top:1em;
 
 }
@@ -36,14 +36,18 @@ a img:hover{
 	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
+	top:50%;
+	position:fixed;
+	transform: translate(0%,-50%);
+	min-width:100%;
 }
 
 .page-side{
 	max-width:30%;
 	height: auto;
 	padding:2em;
-	margin-top:16em;
+	/*margin-top:16em;*/
 }
 
 .page-side img{
@@ -59,8 +63,8 @@ a img:hover{
 footer {
 	font-style: italic; 
 	color: rgb(36,57,87);
-	float : left;
-	/*position:fixed;
+	/*float : left;
+	position:fixed;
 	top: 720px;*/
 }
 
@@ -305,6 +309,9 @@ text-decoration:underline;
 	display: none;
 }
 
+
+/*MOBILE DISPLAY*/
+
 @media screen and (max-width: 1100px) {
 	.top-picture img{
 
@@ -332,6 +339,7 @@ text-decoration:underline;
 	}
 	.albums-thumbnails img{
 		width:100%;
+		max-width: none;
 	}
 	.thumb{
 		justify-content: space-around
@@ -402,6 +410,8 @@ section h2{
 	justify-content: center;
 	align-items: center;
 	flex-wrap:wrap;
+	position: unset;
+	transform: unset;
 }
 
 .page-side{margin-top:0em;
@@ -409,7 +419,9 @@ padding:0em;}
 
 .photo{max-width:100%;}
 
-.photo img {max-height: 1300px;}
+/*.photo img {max-height: 1300px;}*/
+.photo img {max-height: none;}
+
 
 footer {
 position:relative;

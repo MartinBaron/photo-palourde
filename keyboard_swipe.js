@@ -1,11 +1,9 @@
 document.onkeyup = function(e) {
-  if (e.which == 77) {
-    alert("M key was pressed");
-  } else if (e.ctrlKey && e.which == 66) {
-    alert("Ctrl + B shortcut combination was pressed");
-  } else if (e.ctrlKey && e.altKey && e.which == 89) {
-    alert("Ctrl + Alt + Y shortcut combination was pressed");
-  } else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
-    alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
-  }
-};
+                    if (e.which == 37) {
+                        console.log("left arrow key was pressed");
+                        window.location.href = #PHOTO_PREVIOUS_LINK;
+                    } else if (e.which == 39) {
+                        console.log("right arrow key was pressed");
+                        window.location.href = #PHOTO_NEXT_LINK;
+                    }
+                };
